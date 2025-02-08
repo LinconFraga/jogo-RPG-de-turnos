@@ -61,7 +61,9 @@
     <div class="about-content">
         <h1>Sobre o Jogo</h1>
         <p>
-            Este jogo foi criado por [Seu Nome] em [Ano].<br>
+            Este RPG medieval transporta jogadores para um universo de perigos e maravilhas, onde cada escolha molda o destino do reino.<br>
+            Prepare-se para embarcar em uma jornada repleta de batalhas, intrigas e mistérios!<br>
+            Desenvolvido por: Gabriel Luna, Karolayne Firmino, Mikaias Santos, Lucas Cavalcanti, Lincoln Fraga no ano de 2025.<br>
             Desenvolvido como um projeto de RPG medieval de turnos, utilizando Svelte e TypeScript.<br>
             Inspirado em histórias clássicas de aventura e enigmas.
         </p>
