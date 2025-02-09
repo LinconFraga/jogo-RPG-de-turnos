@@ -7,7 +7,7 @@
     let music: Howl;
     let showChallengeButton = true; // Mostrar botão "Desafiar Guardião"
     let showGuardianDialog = false; // Mostrar diálogo do guardião
-    let showSphinxDialog = false; // Mostrar diálogo da esfinge
+    let showSphinxDialog = false; // Mostrar diálogo do guardião
     let showRiddles = false; // Mostrar enigmas
     let showFeedbackDialog = false; // Mostrar feedback do guardião
     let feedbackMessage = ''; // Mensagem de feedback
@@ -64,7 +64,7 @@
         showGuardianDialog = true;
     }
 
-    // Função para iniciar o diálogo da esfinge
+    // Função para iniciar o diálogo do guardião
     function startSphinxDialog() {
         showGuardianDialog = false;
         showSphinxDialog = true;
@@ -80,12 +80,12 @@
     function checkAnswer() {
         if (playerAnswer.toLowerCase() === riddles[currentRiddle].answer) {
             correctAnswers += 1;
-            feedbackMessage = `Muito bem, Herói! Você acertou. Faltam ${2 - correctAnswers} enigmas para vencer.`;
+            feedbackMessage = `Muito bem, Herói! Você acertou.`;
         } else {
             if (correctAnswers === 0 && currentRiddle === 0) {
-                feedbackMessage = 'Cuidado, Herói! Errou pela primeira vez. Mais um erro e você será meu escravo!';
+                feedbackMessage = 'Sinto pelo teu reino, Herói! Erraste pela primeira vez. Mais um erro e serás meu escravo!';
             } else {
-                feedbackMessage = 'Você errou novamente! Agora você é meu escravo para sempre.';
+                feedbackMessage = 'Você errou novamente! Agora você é meu escravo para sempre!';
                 endGame();
             }
         }
@@ -266,28 +266,28 @@
         <div class="dialog-box">
             <h2>Herói de Zatmênia</h2>
             <p>
-                Eu sou o cavaleiro do reino de Zatmênia e desejo encontrar o caminho para a Cidade de Elderling. Sei que conheces todos os lugares desta floresta. Mostre-me onde se esconde o flagelo do meu povo: o maldito rei Og!
+                Eu sou o cavaleiro do reino de Zatmênia e desejo encontrar o caminho para a Cidade de Elderling. Sei que conheces todos os lugares desta floresta. Mostra-me onde se esconde o flagelo do meu povo: o maldito rei Og!
             </p>
             <button on:click={startSphinxDialog}>Continuar</button>
         </div>
     {/if}
 
-    <!-- Diálogo da Esfinge -->
+    <!-- Diálogo do guardião -->
     {#if showSphinxDialog}
         <div class="dialog-box">
             <h2>Guardião dos Caminhos</h2>
             <p>Então buscas o caminho perdido,
                 A rota até o Reino Escondido?
                 Se assim o queres, tens que acertar
-                Os três enigmas que vou perguntar.
+                os três enigmas que vou perguntar.
                 Se dois errares, teu fim será certo,
-                Serás meu servo neste bosque deserto.
+                serás meu servo neste bosque deserto.
                 Mas se me vences, te darei a visão:
-                O mapa que guia ao teu coração.
+                o mapa que guia ao teu coração.
                 Queres mesmo este fardo carregar,
-                Ó bravo herói de Zatmênia a lutar?
+                ó bravo herói de Zatmênia a lutar?
                 Pensa bem antes de decidir,
-                Pois poucos voltam ao partir.
+                pois poucos voltam ao partir.
             </p>
             <button on:click={startRiddles}>Aceitar Desafio</button>
         </div>
@@ -296,7 +296,7 @@
     <!-- Enigmas -->
     {#if showRiddles && !gameOver && currentRiddle < 3}
         <div class="dialog-box">
-            <h2>Enigma da Esfinge</h2>
+            <h2>Enigma do guardião</h2>
             <p>{riddles[currentRiddle].question}</p>
             <div class="riddle-container">
                 <input type="text" bind:value={playerAnswer} placeholder="Sua resposta..." />
@@ -319,11 +319,11 @@
         <div class="dialog-box">
             {#if gameWon}
                 <h2>Vitória!</h2>
-                <p>Parabéns! Você venceu a esfinge e recebeu o mapa para o Reino de Elderling.</p>
+                <p>Parabéns! Você venceu o guardião e recebeu o mapa para o Reino de Elderling.</p>
                 <button on:click={proceedToBattle}>Prosseguir</button>
             {:else}
                 <h2>Derrota!</h2>
-                <p>Você perdeu! Agora você é escravo da esfinge para sempre.</p>
+                <p>Você perdeu! Agora você é escravo do guardião da floresta para sempre!</p>
                 <button on:click={returnToMenu}>Voltar ao Menu</button>
             {/if}
         </div>
