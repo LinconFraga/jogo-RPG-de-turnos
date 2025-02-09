@@ -4,7 +4,6 @@
   let isSoundOn = true;
   let audio: HTMLAudioElement;
 
-  // Função para ligar/desligar o som
   function toggleSound() {
     isSoundOn = !isSoundOn;
     if (isSoundOn) {
@@ -14,31 +13,28 @@
     }
   }
 
-  // Inicializa o áudio quando o componente é montado
   onMount(() => {
-    audio = new Audio('/sounds/tela-de-fundo.mp3'); // Substitua pelo caminho do seu arquivo de som
+    audio = new Audio('/sounds/tela-de-fundo.mp3');
     audio.loop = true;
     if (isSoundOn) {
       audio.play();
     }
   });
 
-  // Para o áudio quando o componente é desmontado
   onDestroy(() => {
     if (audio) {
       audio.pause();
-      audio.currentTime = 0; // Opcional: Reinicia o áudio para o início
+      audio.currentTime = 0;
     }
   });
 </script>
 
 <style>
-  /* Garante que o body e html ocupem toda a altura da tela */
   body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Remove a barra de rolagem */
+    overflow: hidden;
   }
 
   .main-menu {
@@ -71,18 +67,23 @@
 
   button, a {
     margin: 10px;
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 12px 26px;
+    font-size: 24px; /* Aumentei um pouco o tamanho para melhor visibilidade */
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: 2px solid white;
     border-radius: 5px;
-    font-family: 'BroncoPersonalUse', sans-serif;
+    font-family: 'OldLondon', serif; /* Mudança principal aqui */
     text-decoration: none;
+    transition: all 0.3s ease; /* Adicionei uma transição suave */
   }
 
-  /* Estilo do botão de som */
+  button:hover, a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+  }
+
   .sound-button {
     position: absolute;
     bottom: 20px;
@@ -98,6 +99,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-family: inherit; /* Mantém a fonte padrão para o botão de som */
+    font-size: 16px; /* Tamanho específico para o botão de som */
   }
 </style>
 
@@ -107,7 +110,6 @@
     <a href="/story">Jogar</a>
     <a href="/about">Sobre</a>
   </div>
-  <!-- Botão de som -->
   <button class="sound-button" on:click={toggleSound}>
     {#if isSoundOn}
       🔈
