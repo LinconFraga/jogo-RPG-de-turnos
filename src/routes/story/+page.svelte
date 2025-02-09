@@ -53,22 +53,13 @@
       position: relative;
     }
   
-    /* Estilo da imagem da história */
-    .story-image {
-      max-width: 80%;
-      max-height: 70vh;
-      border: 5px solid rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    }
-  
     /* Estilo dos botões */
     .next-button,
     .back-button {
       position: absolute;
       bottom: 40px;
-      padding: 15px 30px;
-      font-size: 24px;
+      padding: 12px 25px;
+      font-size: 20px;
       cursor: pointer;
       background-color: rgba(0, 0, 0, 0.8);
       color: white;
@@ -99,13 +90,6 @@
   </style>
   
   <div class="story">
-    <!-- Imagem da história -->
-    <img
-      src="/images/story-image.jpg"
-      alt="História de Zatmênia"
-      class="story-image"
-    />
-  
     <!-- Botão de voltar -->
     <button class="back-button" on:click={goBack}>
       Voltar
@@ -113,6 +97,6 @@
   
     <!-- Botão de prosseguir -->
     <button class="next-button" on:click={startGame}>
-      Prosseguir
+      Seguir
     </button>
   </div>
