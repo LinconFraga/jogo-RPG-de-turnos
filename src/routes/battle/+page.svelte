@@ -197,14 +197,14 @@
   
     .player-info {
       grid-area: player;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgb(255, 255, 255);
       padding: 15px;
       border-right: 3px solid gold;
     }
   
     .enemy-info {
       grid-area: enemy;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgb(255, 255, 255);
       padding: 15px;
       border-left: 3px solid gold;
     }
@@ -214,7 +214,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgb(255, 255, 255);
       position: relative;
     }
   
