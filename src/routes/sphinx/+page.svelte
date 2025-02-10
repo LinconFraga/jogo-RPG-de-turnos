@@ -21,7 +21,7 @@
     // Enigmas
     const riddles = [
         {
-            question: 'Sou o passado e o futuro, mas nunca o presente sou. Sou inevitável e corro, mas não tenho forma ou cor.',
+            question: 'Sou o passado e o futuro, mas nunca o presente sou. Sou inevitável e corro, mas não tenho forma, nem cor.',
             answer: 'o tempo',
         },
         {
@@ -155,72 +155,82 @@
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
- /* Modificação na classe challenge-button */
+    /* Estilo original do botão "Desafiar Guardião" */
     .challenge-button {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    font-size: 2rem;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #333333;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-family: 'OldLondon', serif;
-    text-transform: uppercase;
-    box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
-    transition: box-shadow 0.2s; /* Removida a transição do transform */
-}
-
-    .challenge-button:hover {
-    box-shadow: 0 0 15px rgba(204, 204, 204, 1);
-    /* Removido o transform: scale() */
-}
-
-    .dialog-box button {
-        font-size: 1.2rem; /* Tamanho reduzido para os outros botões */
-        padding: 8px 16px; /* Reduzido o padding para diminuir as laterais */
-    }
-
-    .dialog-box button:hover, .challenge-button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(204, 204, 204, 1);
-    }
-
-    input {
-        margin-top: 10px;
-        padding: 10px;
-        font-size: 1.5rem;
-        width: 100%;
-        font-family: 'OldLondon', serif;
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 2px solid #D2B48C;
-        border-radius: 5px;
-    }
-
-    .return-button {
         position: absolute;
-        bottom: 20px;
-        left: 20px;
+        top: 50%;
+        left: 35%;
+        font-size: 2rem;
         padding: 10px 20px;
-        font-size: 1.2rem;
         cursor: pointer;
-        background-color: #333333; /* Cinza escuro */
+        background-color: #333333;
         color: white;
         border: none;
         border-radius: 10px;
         font-family: 'OldLondon', serif;
         text-transform: uppercase;
-        box-shadow: 0 0 10px rgba(204, 204, 204, 0.8); /* Sombra cinza claro */
-        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
+        transition: box-shadow 0.2s;
     }
 
-    .return-button:hover {
-        transform: scale(1.05);
+    .challenge-button:hover {
         box-shadow: 0 0 15px rgba(204, 204, 204, 1);
     }
 
+    /* Estilo dos demais botões seguindo o padrão do "Desafiar Guardião" */
+    .dialog-box button,
+    .return-button {
+        font-size: 2rem;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #333333;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-family: 'OldLondon', serif;
+        text-transform: uppercase;
+        box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
+        transition: box-shadow 0.2s;
+        margin: 5px;
+        min-width: 150px;
+    }
+
+    .dialog-box button:hover,
+    .return-button:hover {
+        box-shadow: 0 0 15px rgba(204, 204, 204, 1);
+    }
+
+    /* Ajuste do input */
+    input {
+        margin: 10px auto;
+        padding: 8px;
+        font-size: 1.2rem;
+        width: 60%;
+        max-width: 300px;
+        font-family: 'OldLondon', serif;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 2px solid #D2B48C;
+        border-radius: 5px;
+        display: block;
+    }
+
+    /* Container de enigmas */
+    .riddle-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Posicionamento específico do botão de retorno */
+    .return-button {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1.2rem;
+    }
+
+    /* Botão de som */
     .sound-button {
         position: absolute;
         bottom: 20px;
@@ -228,7 +238,7 @@
         padding: 10px;
         font-size: 1rem;
         cursor: pointer;
-        background-color: #333333; /* Cinza escuro */
+        background-color: #333333;
         color: white;
         border: none;
         border-radius: 50%;
@@ -237,19 +247,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 0 10px rgba(204, 204, 204, 0.8); /* Sombra cinza claro */
-        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
+        transition: box-shadow 0.2s;
     }
 
     .sound-button:hover {
-        transform: scale(1.1);
         box-shadow: 0 0 15px rgba(204, 204, 204, 1);
-    }
-
-    .riddle-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px; /* Espaçamento entre input e botão */
     }
 </style>
 
@@ -277,7 +280,7 @@
         <div class="dialog-box">
             <h2>Guardião dos Caminhos</h2>
             <p>Então buscas o caminho perdido,
-                A rota até o Reino Escondido?
+                a rota até o Reino Escondido?
                 Se assim o queres, tens que acertar
                 os três enigmas que vou perguntar.
                 Se dois errares, teu fim será certo,
