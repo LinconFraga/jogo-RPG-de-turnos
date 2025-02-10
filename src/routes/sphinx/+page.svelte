@@ -290,7 +290,7 @@
                 Queres mesmo este fardo carregar,
                 ó bravo herói de Zatmênia a lutar?
                 Pensa bem antes de decidir,
-                pois poucos voltam ao partir.
+                pois poucos voltam ao prosseguir.
             </p>
             <button on:click={startRiddles}>Aceitar Desafio</button>
         </div>
