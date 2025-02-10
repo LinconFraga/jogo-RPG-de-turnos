@@ -163,7 +163,8 @@
       text-align: center;
       font-size: 40px;
       padding: 25px;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
       border-bottom: 3px solid gold;
     }
   
@@ -197,14 +198,16 @@
   
     .player-info {
       grid-area: player;
-      background: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
       padding: 15px;
       border-right: 3px solid gold;
     }
   
     .enemy-info {
       grid-area: enemy;
-      background: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
       padding: 15px;
       border-left: 3px solid gold;
     }
@@ -214,25 +217,17 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0);
       position: relative;
     }
   
-    .log {
-      grid-area: log;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px;
-      overflow-y: auto;
-      border-top: 3px solid gold;
-      font-size: 18px;
-    }
   
     .actions {
       grid-area: actions;
       display: flex;
       justify-content: center;
       gap: 20px;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.7);
       padding: 15px;
       border-top: 3px solid gold;
     }
@@ -273,7 +268,7 @@
     }
   
     .mana-bar div {
-      background: blue;
+      background: rgb(8, 214, 59);
     }
   
     .character {
