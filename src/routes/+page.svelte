@@ -107,7 +107,7 @@
 <div class="main-menu">
   <h1 class="title">Zatmênia</h1>
   <div class="buttons">
-    <a href="/story">Jogar</a>
+    <a href="/play">Jogar</a>
     <a href="/about">Sobre</a>
   </div>
   <button class="sound-button" on:click={toggleSound}>

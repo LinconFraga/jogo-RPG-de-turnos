@@ -23,6 +23,7 @@
 	},
 	"dependencies": {
 		"howler": "^2.2.4",
+		"kaplay": "^3001.0.9",
 		"svelte-routing": "^2.13.0"
 	}
 }
