@@ -159,7 +159,7 @@
     .challenge-button {
         position: absolute;
         top: 50%;
-        left: 35%;
+        left: 40%;
         font-size: 2rem;
         padding: 10px 20px;
         cursor: pointer;
