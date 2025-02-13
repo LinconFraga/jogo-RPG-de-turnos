@@ -25,7 +25,7 @@
 
 <style>
     .about {
-        background-image: url('/images/about-background.jpg');
+        background-image: url('/images/about-background.jpeg');
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -37,11 +37,19 @@
         text-align: center;
     }
 
+    .logo {
+        margin-top: 20px;
+        max-width: 500px; /* Ajuste o tamanho conforme necessário */
+    }
+
     .about-content {
-        background: rgba(0, 0, 0, 0.7);
+        width: 100vh;
+        height: auto;
+        background: rgba(0, 0, 0, 0.6);
         padding: 20px;
         border-radius: 10px;
-        max-width: 600px;
+        max-width: 900px;
+        font-size: 25px;
     }
 
     button {
@@ -58,14 +66,14 @@
 </style>
 
 <div class="about">
+    <img src="/images/if.PNG" alt="Logotipo" class="logo" /> <!-- Adicione a imagem do logotipo aqui -->
     <div class="about-content">
         <h1>Sobre o Jogo</h1>
         <p>
-            Este RPG medieval transporta jogadores para um universo de perigos e maravilhas, onde cada escolha molda o destino do reino.<br>
-            Prepare-se para embarcar em uma jornada repleta de batalhas, intrigas e mistérios!<br>
-            Desenvolvido por: Gabriel Luna, Karolayne Firmino, Mikaias Santos, Lucas Cavalcanti, Lincoln Fraga no ano de 2025.<br>
-            Desenvolvido como um projeto de RPG medieval de turnos, utilizando Svelte e TypeScript.<br>
-            Inspirado em histórias clássicas de aventura e enigmas.
+        INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karollayne Firmino.
+        </p>
+        <p>
+            USO DA IA: Destinada a criação da lógica dos códigos; aprendizado a respeito do funcionamento dos mesmos, para facilitar a sua leitura e adaptações necessárias para criação do estilo do jogo tal como idealizado; e das imagens usadas em plano de fundo. Foram usadas mais de uma inteligência artificial para o projeto, sendo as principais o Claude e o Microsoft Designer.
         </p>
         <button on:click={goBack}>Voltar</button>
     </div>

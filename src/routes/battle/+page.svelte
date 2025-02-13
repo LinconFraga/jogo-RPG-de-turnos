@@ -166,7 +166,7 @@
 <div class="battle-container">
   <div class="audio-control">
     <button class="music-button" on:click={toggleMusic}>
-      {isMusicPlaying ? '🔇' : '🔊'}
+      {isMusicPlaying ? '🔊' : '🔇'}
     </button>
   </div>
 
@@ -325,7 +325,7 @@
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border-radius: 10px;
-    border: 2px solid #gold;
+    border: 2px solid;
     z-index: 10;
     margin-top: auto;
   }
@@ -388,7 +388,7 @@
   .music-button {
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    border: 2px solid #gold;
+    border: 2px solid;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
