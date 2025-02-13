@@ -51,7 +51,7 @@
 
   // Animation timings
   const animationDuration = 1000;
-  const attackDistance = 150; // Reduzida a distância de ataque para permitir colisão
+  const attackDistance = 3560; // Reduzida a distância de ataque para permitir colisão
   
   // Function to update enemy stats
   function updateEnemyStats(newStats) {
