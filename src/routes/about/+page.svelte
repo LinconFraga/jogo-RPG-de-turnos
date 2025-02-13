@@ -39,7 +39,7 @@
 
     .logo {
         margin-top: 20px;
-        max-width: 500px; /* Ajuste o tamanho conforme necessário */
+        width: 850px; /* Ajuste o tamanho conforme necessário */
     }
 
     .about-content {
@@ -66,8 +66,8 @@
 </style>
 
 <div class="about">
-    <img src="/images/if.PNG" alt="Logotipo" class="logo" /> <!-- Adicione a imagem do logotipo aqui -->
     <div class="about-content">
+        <img src="/images/if.PNG" alt="Logotipo" class="logo" /> <!-- imagem do logotipo aqui -->
         <h1>Sobre o Jogo</h1>
         <p>
         INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karollayne Firmino.
