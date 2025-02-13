@@ -3,7 +3,7 @@
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
 
-  // Game state
+  // inicio do jogo
   let playerHealth = 100;
   let playerMana = 50;
   let currentTurn = 'player';
@@ -11,7 +11,7 @@
   let playerState = 'idle';
   let enemyState = 'idle';
   
-  // Enemy customizable stats
+  // Estatísticas personalizáveis ​​do inimigo
   let enemyStats = {
     health: 100,
     maxHealth: 100,
@@ -23,7 +23,7 @@
     criticalMultiplier: 1.5
   };
 
-  // Getter/Setter for enemy health to ensure it stays within bounds
+  // pegador/levantador para a saúde do inimigo para garantir que ele permaneça dentro dos limites
   $: enemyHealth = enemyStats.health;
   $: {
     enemyStats.health = Math.max(0, Math.min(enemyStats.maxHealth, enemyHealth));
@@ -33,7 +33,7 @@
   let bgMusic;
   let isMusicPlaying = false;
   
-  // Position tracking for characters
+  // Rastreamento de posição para personagens
   const playerPosition = tweened({ x: 0, y: 0 }, {
     duration: 500,
     easing: cubicOut
@@ -44,16 +44,16 @@
     easing: cubicOut
   });
   
-  // Combat stats
+  // Estatísticas de combate
   const playerAttackDamage = 15;
   const healAmount = 25;
   const healManaCost = 15;
 
-  // Animation timings
+  // Tempos de animação
   const animationDuration = 1000;
   const attackDistance = 3560; // Reduzida a distância de ataque para permitir colisão
   
-  // Function to update enemy stats
+  // Função para atualizar estatísticas do inimigo
   function updateEnemyStats(newStats) {
     enemyStats = {
       ...enemyStats,
@@ -81,7 +81,7 @@
     
     playerState = 'attack';
     
-    // Move forward and slightly up for attack
+    // Avance e suba ligeiramente para atacar
     await playerPosition.set({ x: attackDistance, y: -20 });
     
     const damage = playerAttackDamage + Math.floor(Math.random() * 5);
@@ -91,7 +91,7 @@
     const enemy = document.querySelector('.enemy-sprite');
     enemy.style.animation = 'impact 0.2s ease-in-out';
     
-    // Return to original position
+    // retorna para a posição inicial 
     await playerPosition.set({ x: 0, y: 0 });
     
     if (enemyStats.health <= 0) {
@@ -108,7 +108,7 @@
   async function enemyTurn() {
     enemyState = 'attack';
     
-    // Move forward and slightly up for attack
+    // Avance e suba ligeiramente para atacar
     await enemyPosition.set({ x: -attackDistance, y: -20 });
     
     let damage = enemyStats.baseDamage + Math.floor(Math.random() * enemyStats.damageVariation);
@@ -125,7 +125,7 @@
     const player = document.querySelector('.player-sprite');
     player.style.animation = 'impact 0.2s ease-in-out';
     
-    // Return to original position
+    // Retornar à posição original
     await enemyPosition.set({ x: 0, y: 0 });
     
     if (playerHealth <= 0) {
@@ -159,7 +159,7 @@
   });
 
   function loadSprites() {
-    // Sprite loading logic here
+    // Lógica de carregamento de Sprite aqui
   }
 </script>
 
@@ -242,7 +242,7 @@
     align-items: center;
     height: 60%;
     padding: 0 100px;
-    margin-top: 100px; /* Moved characters down */
+    margin-top: 100px; /* Personagens movidos para baixo */
   }
 
   .character {
