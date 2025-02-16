@@ -5,7 +5,7 @@
 
   // inicio do jogo
   let playerHealth = 100;
-  let playerMana = 50;
+  let playerMana = 100;
   let currentTurn = 'player';
   let gameMessage = 'Sua vez!';
   let playerState = 'idle';
@@ -15,10 +15,9 @@
   let enemyStats = {
     health: 100,
     maxHealth: 100,
-    baseDamage: 12,
-    damageVariation: 5,
-    name: "Inimigo",
-    level: 1,
+    baseDamage: 20,
+    damageVariation: 3,
+    name: "rei Og de Elderling",
     criticalChance: 0.1,
     criticalMultiplier: 1.5
   };
@@ -31,7 +30,7 @@
   
   // Controle de áudio
   let bgMusic;
-  let isMusicPlaying = false;
+  let isMusicPlaying = true;
   
   // Rastreamento de posição para personagens
   const playerPosition = tweened({ x: 0, y: 0 }, {
@@ -46,12 +45,12 @@
   
   // Estatísticas de combate
   const playerAttackDamage = 15;
-  const healAmount = 25;
-  const healManaCost = 15;
+  const healAmount = 30;
+  const healManaCost = 20;
 
   // Tempos de animação
   const animationDuration = 1000;
-  const attackDistance = 3560; // Reduzida a distância de ataque para permitir colisão
+  const attackDistance = 2400; // Reduzida a distância de ataque para permitir colisão
   
   // Função para atualizar estatísticas do inimigo
   function updateEnemyStats(newStats) {
@@ -188,9 +187,7 @@
     <div class="character enemy" 
          class:enemy-dead={enemyState === 'dead'}
          style="transform: translate({$enemyPosition.x}px, {$enemyPosition.y}px)">
-      <div class="enemy-info">
-        <span class="enemy-name">Nível {enemyStats.level} {enemyStats.name}</span>
-      </div>
+
       <div class="sprite enemy-sprite {enemyState}"></div>
       <div class="stats">
         <div class="health-bar">
@@ -240,7 +237,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60%;
+    height: 29%;
     padding: 0 100px;
     margin-top: 100px; /* Personagens movidos para baixo */
   }
@@ -256,7 +253,7 @@
     position: relative;
     top: 120%;
     width: 100%;
-    height: 100%;
+    height: 150%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

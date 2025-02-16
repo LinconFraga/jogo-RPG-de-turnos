@@ -22,15 +22,15 @@
     const riddles = [
         {
             question: 'Sou o passado e o futuro, mas nunca o presente sou. Sou inevitável e corro, mas não tenho forma, nem cor.',
-            answer: 'o tempo',
+            answer: 'tempo',
         },
         {
             question: 'Eu te sigo sem descanso, mas nunca posso te tocar. Sou maior ao amanhecer, e à noite deixo de estar.',
-            answer: 'a sombra',
+            answer: 'sombra'
         },
         {
             question: 'Tenho dentes, mas não mordo. Abro portas sem esforço. Pequena sou, mas sem mim, ficarás preso no fim',
-            answer: 'a chave',
+            answer: 'chave',
         },
     ];
 
@@ -39,7 +39,7 @@
         music = new Howl({
             src: ['/sounds/forest-theme.mp3'],
             loop: true,
-            volume: 0.2,
+            volume: 0.35,
         });
         if (isSoundOn) music.play();
 
@@ -117,13 +117,8 @@
 </script>
 
 <style>
-    /* Importação da fonte OldLondon */
-    @font-face {
-        font-family: 'OldLondon';
-        src: url('/fonts/OldLondon.ttf') format('truetype');
-    }
 
-    .game-container {
+.game-container {
         position: relative;
         width: 100%;
         height: 100vh;
@@ -131,7 +126,6 @@
         background-size: cover;
         background-position: center;
         overflow: hidden;
-        font-family: 'OldLondon', serif;
     }
 
     .dialog-box {
@@ -159,7 +153,7 @@
     .challenge-button {
         position: absolute;
         top: 50%;
-        left: 40%;
+        left: 36%;
         font-size: 2rem;
         padding: 10px 20px;
         cursor: pointer;
@@ -171,6 +165,8 @@
         text-transform: uppercase;
         box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
         transition: box-shadow 0.2s;
+        margin: 5px;
+        min-width: 150px;
     }
 
     .challenge-button:hover {
@@ -269,7 +265,7 @@
         <div class="dialog-box">
             <h2>Herói de Zatmênia</h2>
             <p>
-                Eu sou o cavaleiro do reino de Zatmênia e desejo encontrar o caminho para a Cidade de Elderling. Sei que conheces todos os lugares desta floresta. Mostra-me onde se esconde o flagelo do meu povo: o maldito rei Og!
+                Eu sou o cavaleiro do reino de Zatmênia e desejo encontrar o caminho para a Cidade de Elderling! Sei que guardas todos os lugares desta floresta. Mostra-me onde se esconde o flagelo do meu povo: o maldito rei Og!
             </p>
             <button on:click={startSphinxDialog}>Continuar</button>
         </div>
