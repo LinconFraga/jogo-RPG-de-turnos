@@ -76,7 +76,7 @@
         INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karollayne Firmino.
         </p>
         <p>
-            USO DA IA: Destinada a criação da lógica dos códigos; aprendizado a respeito do funcionamento dos mesmos, para facilitar a sua leitura e adaptações necessárias para criação do estilo do jogo tal como idealizado; criação das imagens usadas em plano de fundo do jogo e dos sprites. Foram usadas mais de uma inteligência artificial para o projeto, sendo as principais o Claude e o Microsoft Designer.
+            USO DA IA: Destinada à criação da lógica dos códigos, ao aprendizado sobre o funcionamento dos mesmos, para facilitar sua leitura e a realização das adaptações necessárias para a criação do estilo do jogo tal como idealizado, e à criação das imagens usadas no plano de fundo e nos sprites. Foram usadas mais de uma inteligência artificial no projeto, sendo as principais o Claude, para os códigos, e o Microsoft Designer, para as imagens.
         </p>
 
         <button on:click={goBack}>Voltar</button>
