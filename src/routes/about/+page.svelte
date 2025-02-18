@@ -39,7 +39,7 @@
 
     .logo {
         margin-top: 20px;
-        width: 850px; /* Ajuste o tamanho conforme necessário */
+        width: 360px; /* Ajuste o tamanho conforme necessário */
     }
 
     .about-content {
@@ -70,11 +70,15 @@
         <img src="/images/if.PNG" alt="Logotipo" class="logo" /> <!-- imagem do logotipo aqui -->
         <h1>Sobre o Jogo</h1>
         <p>
+        PROFESSOR: Allan Lima
+        </p>
+        <p>
         INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karollayne Firmino.
         </p>
         <p>
-            USO DA IA: Destinada a criação da lógica dos códigos; aprendizado a respeito do funcionamento dos mesmos, para facilitar a sua leitura e adaptações necessárias para criação do estilo do jogo tal como idealizado; e das imagens usadas em plano de fundo. Foram usadas mais de uma inteligência artificial para o projeto, sendo as principais o Claude e o Microsoft Designer.
+            USO DA IA: Destinada a criação da lógica dos códigos; aprendizado a respeito do funcionamento dos mesmos, para facilitar a sua leitura e adaptações necessárias para criação do estilo do jogo tal como idealizado; criação das imagens usadas em plano de fundo do jogo e dos sprites. Foram usadas mais de uma inteligência artificial para o projeto, sendo as principais o Claude e o Microsoft Designer.
         </p>
+
         <button on:click={goBack}>Voltar</button>
     </div>
 </div>
