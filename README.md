@@ -14,6 +14,7 @@ Histórico de atualizações:
 |   Versão      |           Detalhes            |
 |---------------|-------------------------------|
 |    `v1.0.0`      |    - Criação da intro, menu, tema sonoro, combate e inserção de sprites |
+|    `v1.1.0`      |    - Adição do patch notes e recomendações de contribuição ao README |
 
 ## 📝 Fluxo de desenvolvimento
 
