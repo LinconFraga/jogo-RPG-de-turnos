@@ -1,38 +1,39 @@
-# sv
+## Projeto de criação de jogos - RPG - 1º Período IPI
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
 
-## Creating a project
+> Repositório do jogo-RPG-de-turnos.
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Documentação
 
-```bash
-# create a new project in the current directory
-npx sv create
+### 🔥 Patch Notes - V1.0.0 18/02/2025
 
-# create a new project in my-app
-npx sv create my-app
-```
+Histórico de atualizações:
 
-## Developing
+|   Versão      |           Detalhes            |
+|---------------|-------------------------------|
+|    `v1.0.0`      |    - Criação da intro, menu, tema sonoro, combate e inserção de sprites |
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 📝 Fluxo de desenvolvimento
 
-```bash
-npm run dev
+Para contribuir com **jogo-RPG-de-turnos**, siga estas etapas:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. Acesse a branch `main`.
+2. Crie um branch: `git checkout -b <nome_branch>`. Obs: É interessante criar uma branch com nome que refira as ativades que serão realizadas, evitar commitar diretamente na main ou criar branchs com nomes genéricos como:
+    - "correção de bugs"
+    - "Inserindo coisas novas"
+    - "Fazendo alterações"
 
-## Building
+    Utilize nomes que atendam aos Conventional Commits e descritivos como:
+    - "feat/adicionando-login"
+    - "fix/corrigindo-erro-da-barra-de-hp"
+    - "docs/documentando-descrição-da-readme"
 
-To create a production version of your app:
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Suba a branch com as modificações: `git push origin <nome_branch>`
+5. Crie a solicitação de merge. Dessa forma mantemos um histórico do que foi implementado.
 
-```bash
-npm run build
-```
+Como alternativa, consulte a documentação do GitHub em [como criar um merge request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Para consulta a respeito dos [Conventional Commmits](https://www.conventionalcommits.org/en/v1.0.0/)
