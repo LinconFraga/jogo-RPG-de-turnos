@@ -28,7 +28,7 @@
     enemyStats.health = Math.max(0, Math.min(enemyStats.maxHealth, enemyHealth));
   }
   
-  // Controle de áudio
+ 
   let bgMusic;
   let isMusicPlaying = true;
   
@@ -88,8 +88,12 @@
     gameMessage = `Você causou ${damage} de dano!`;
     
     const enemy = document.querySelector('.enemy-sprite');
-    enemy.style.animation = 'impact 0.2s ease-in-out';
-    
+    // enemy.style.animation = 'impact 0.2s ease-in-out';
+    if (enemy instanceof HTMLElement) {
+      enemy.style.animation = 'impact 0.2s ease-in-out';
+      setTimeout(() => (enemy.style.animation = ''), 200);
+    }
+ 
     // retorna para a posição inicial 
     await playerPosition.set({ x: 0, y: 0 });
     
@@ -122,7 +126,11 @@
     playerHealth = Math.max(0, playerHealth - damage);
     
     const player = document.querySelector('.player-sprite');
-    player.style.animation = 'impact 0.2s ease-in-out';
+    // player.style.animation = 'impact 0.2s ease-in-out';
+    if (player instanceof HTMLElement) {
+      player.style.animation = 'impact 0.2s ease-in-out';
+      setTimeout(() => (player.style.animation = ''), 200);
+    }
     
     // Retornar à posição original
     await enemyPosition.set({ x: 0, y: 0 });
