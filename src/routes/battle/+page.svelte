@@ -28,7 +28,8 @@
     enemyStats.health = Math.max(0, Math.min(enemyStats.maxHealth, enemyHealth));
   }
   
- 
+  // Controle de áudio
+
   let bgMusic;
   let isMusicPlaying = true;
   
