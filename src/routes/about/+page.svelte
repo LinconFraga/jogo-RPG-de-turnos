@@ -73,7 +73,7 @@
         PROFESSOR: Allan Lima
         </p>
         <p>
-        INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karollayne Firmino.
+        INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karolayne Firmino.
         </p>
         <p>
             USO DA IA: Destinada à criação da lógica dos códigos, ao aprendizado sobre o funcionamento dos mesmos, para facilitar sua leitura e a realização das adaptações necessárias para a criação do estilo do jogo tal como idealizado, e à criação das imagens usadas no plano de fundo e nos sprites. Foram usadas mais de uma inteligência artificial no projeto, sendo as principais o Claude, para os códigos, e o Microsoft Designer, para as imagens.

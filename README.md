@@ -15,6 +15,7 @@ Histórico de atualizações:
 |---------------|-------------------------------|
 |    `v1.0.0`      |    - Criação da intro, menu, tema sonoro, combate e inserção de sprites |
 |    `v1.1.0`      |    - Adição do patch notes e recomendações de contribuição ao README |
+|    `v1.2.0`      |    - Alterações de configuração de inferiancias de tipos e adiçãao de tratativas para htmlElements |
 
 ## 📝 Fluxo de desenvolvimento
 
