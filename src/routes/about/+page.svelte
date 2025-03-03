@@ -1,3 +1,4 @@
+
 <script lang="ts">
     import { onMount } from 'svelte';
     import { Howl } from 'howler';
@@ -23,48 +24,6 @@
     }
 </script>
 
-<style>
-    .about {
-        background-image: url('/images/about-background.jpeg');
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-    }
-
-    .logo {
-        margin-top: 20px;
-        width: 360px; /* Ajuste o tamanho conforme necessário */
-    }
-
-    .about-content {
-        width: 100vh;
-        height: auto;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 900px;
-        font-size: 25px;
-    }
-
-    button {
-        margin-top: 20px;
-        padding: 15px 30px;
-        font-size: 20px;
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        border: 2px solid white;
-        border-radius: 5px;
-        font-family: 'BroncoPersonalUse', sans-serif;
-    }
-</style>
-
 <div class="about">
     <div class="about-content">
         <img src="/images/if.PNG" alt="Logotipo" class="logo" /> <!-- imagem do logotipo aqui -->
@@ -82,3 +41,6 @@
         <button on:click={goBack}>Voltar</button>
     </div>
 </div>
+<svelte:head>
+    <link rel="stylesheet" href="/about.css">
+</svelte:head>
