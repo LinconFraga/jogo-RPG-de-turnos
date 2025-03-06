@@ -1,31 +1,95 @@
-.end {
-    background-image: url('/images/end-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
 
-.end-content {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    font-family: 'BroncoPersonalUse', sans-serif;
-}
+    .end {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/images/victory.png'); /* Imagem de fundo */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    /* Adiciona uma camada escura semi-transparente para melhorar a legibilidade do texto */
+    .end::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+    .end-content {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        color: #ffffff;
+        max-width: 600px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Brilho dourado ao redor do painel */
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: gold;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+    
+    p {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+    
+    button {
+        font-family: 'OldLondon', serif;
+        background-color: gold;
+        margin-bottom: 1rem;
+        color: black;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 0.5rem;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    }
+    
+    button:hover {
+        background-color: goldenrod;
+    }
+    
+    .audio-control {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 3;
+    }
+    
+    .music-button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+    
+    .music-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }

@@ -29,7 +29,6 @@
   }
   
   // Controle de áudio
-
   let bgMusic;
   let isMusicPlaying = true;
   
@@ -101,12 +100,25 @@
     if (enemyStats.health <= 0) {
       enemyState = 'dead';
       gameMessage = 'Vitória! Você derrotou o inimigo!';
+      // Adicionar tempo de espera antes de ir para a tela de vitória
+      setTimeout(goToVictoryScreen, 2000);
       return;
     }
     
     playerState = 'idle';
     currentTurn = 'enemy';
     setTimeout(enemyTurn, 1500);
+  }
+  
+  // Função para ir para a tela de vitória
+  function goToVictoryScreen() {
+    // Parar a música da batalha se estiver tocando
+    if (bgMusic) {
+      bgMusic.pause();
+    }
+    
+    // Redirecionar para a tela de vitória
+    window.location.href = '/victory'; // Ajuste o caminho conforme necessário
   }
   
   async function enemyTurn() {

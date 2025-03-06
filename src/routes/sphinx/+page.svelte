@@ -143,7 +143,7 @@
                 a rota até o Reino Escondido?
                 Se assim o queres, tens que acertar
                 os três enigmas que vou perguntar.
-                Se dois errares, teu fim será certo,
+                Se eles errares, teu fim será certo,
                 serás meu servo neste bosque deserto.
                 Mas se me vences, te darei a visão:
                 o mapa que guia ao teu coração.
