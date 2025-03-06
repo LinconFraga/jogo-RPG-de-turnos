@@ -1,25 +1,9 @@
-
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { Howl } from 'howler';
+    import { writable } from 'svelte/store';
 
-    let music: Howl;
-
-    onMount(() => {
-        music = new Howl({
-            src: ['/sounds/main-theme.mp3'],
-            loop: true,
-            volume: 0.5,
-        });
-        music.play();
-
-        return () => {
-            music.stop();
-        };
-    });
+    const activeSection = writable('');
 
     function goBack() {
-        music.stop();
         window.location.href = '/'; // Redireciona para a tela inicial
     }
 </script>
@@ -27,20 +11,53 @@
 <div class="about">
     <div class="about-content">
         <img src="/images/if.PNG" alt="Logotipo" class="logo" /> <!-- imagem do logotipo aqui -->
+        
         <h1>Sobre o Jogo</h1>
-        <p>
-        PROFESSOR: Allan Lima
-        </p>
-        <p>
-        INTEGRANTES: Lincon Fraga, Mikaias Marinho, Gabriel Luna, Lucas Cavalcanti, Karolayne Firmino.
-        </p>
-        <p>
-            USO DA IA: Destinada à criação da lógica dos códigos, ao aprendizado sobre o funcionamento dos mesmos, para facilitar sua leitura e a realização das adaptações necessárias para a criação do estilo do jogo tal como idealizado, e à criação das imagens usadas no plano de fundo e nos sprites. Foram usadas mais de uma inteligência artificial no projeto, sendo as principais o Claude, para os códigos, e o Microsoft Designer, para as imagens.
-        </p>
 
+        <div class="button-group">
+            <button on:click={() => activeSection.set('professor')}>Professor</button>
+            <button on:click={() => activeSection.set('integrantes')}>Integrantes</button>
+            <button on:click={() => activeSection.set('uso_ia')}>Uso da IA</button>
+        </div>
+
+        {#if $activeSection === 'professor'}
+            <div class="info-box">
+                <h4>PROFESSOR</h4>
+                <h5>Allan Lima</h5>
+            </div>
+        {/if}
+        {#if $activeSection === 'integrantes'}
+            <div class="info-box">
+                <ul class="no-bullets">
+                    <h4>INTEGRANTES</h4>
+                    <h5>Lincon Fraga | labf@discente.ifpe.edu.br</h5>
+                    <h5>Mikaias Marinho</h5>
+                    <h5>Gabriel Luna</h5>
+                    <h5>Lucas Cavalcanti</h5>
+                    <h5>Karolayne Firmino</h5>
+                </ul>
+            </div>
+        {/if}
+        {#if $activeSection === 'uso_ia'}
+            <div class="info-box">
+                <h4>USO DA IA</h4>
+                <h5> Destinada à criação da lógica dos códigos, ao aprendizado sobre
+                     o funcionamento dos mesmos, para facilitar sua leitura e a realização
+                      das adaptações necessárias para a criação do estilo do jogo tal
+                       como idealizado, e à criação das imagens usadas no plano de fundo
+                        e nos sprites. Foram usadas mais de uma inteligência artificial 
+                        no projeto, sendo as principais o Claude, para os códigos, e o 
+                        Microsoft Designer, para as imagens.
+                </h5>
+            </div>
+        {/if}
+    </div>
+
+    <div class="button-back">
         <button on:click={goBack}>Voltar</button>
     </div>
 </div>
+
 <svelte:head>
     <link rel="stylesheet" href="/about.css">
 </svelte:head>
