@@ -5,34 +5,34 @@
 
   // Classe dos personagens!!!! 
   class Personagem {
-    hp: number;
-    maxHP: number;
-    baseDamage: number;
-    damageVariation: number;
-    mp: number;
-    maxMp: number;
-    name: string;
-    criticalChance: number;
-    criticalMultiplier: number;
-    state: string;
+    name: string
+    hp: number
+    maxHP: number
+    baseDamage: number
+    damageVariation: number
+    mp: number
+    maxMp: number
+    criticalChance: number
+    criticalMultiplier: number
+    state: string
 
     constructor(
+      name: string = "",
       hp: number, 
       maxHP: number, 
       baseDamage: number, 
       damageVariation: number, 
       mp: number,
-      name: string = "",
       criticalChance: number = 0.1,
       criticalMultiplier: number = 1.5
     ) {
+      this.name = name;
       this.hp = hp;
       this.maxHP = maxHP;
       this.baseDamage = baseDamage;
       this.damageVariation = damageVariation;
       this.mp = mp;
       this.maxMp = mp;
-      this.name = name;
       this.criticalChance = criticalChance;
       this.criticalMultiplier = criticalMultiplier;
       this.state = 'idle';
@@ -61,8 +61,8 @@
   }
 
   //personagens
-  let heroi = new Personagem(100, 100, 15, 5, 100, "Herói");
-  let reiOg = new Personagem(120, 120, 20, 3, 0, "Rei Og de Elderling", 0.1, 1.5);
+  let heroi = new Personagem("Herói", 100, 100, 15, 5, 100);
+  let reiOg = new Personagem("Rei Og de Elderling",120, 120, 20, 3, 0, 0.1, 1.5);
 
   // Variáveis de controle do jogo
   let currentTurn = 'player';
@@ -141,7 +141,7 @@
       reiOg.state = 'dead';
       gameMessage = 'Vitória! Você derrotou o inimigo!';
       // Adicionar tempo de espera antes de ir para a tela de vitória
-      setTimeout(goToVictoryScreen, 2000);
+      setTimeout(goToVictoryScreen, 3000);
       return;
     }
     

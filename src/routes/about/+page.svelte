@@ -34,7 +34,7 @@
                     <h5>Mikaias Marinho</h5>
                     <h5>Gabriel Luna</h5>
                     <h5>Lucas Cavalcanti | lcod@discente.ifpe.edu.br</h5>
-                    <h5>Karolayne Firmino</h5>
+                    <h5>Karolayne Firmino | kfsl@discente.ifpe.edu.br</h5>
                 </ul>
             </div>
         {/if}

@@ -46,7 +46,7 @@
 <div class="story">
   <!-- Botão de áudio -->
   <button class="audio-button" on:click={toggleAudio}>
-      {isPlaying ? '🔊' : '🔇'}
+      {isPlaying ? '🔈' : '🔇'}
   </button>
 
   <!-- Botão de voltar -->
