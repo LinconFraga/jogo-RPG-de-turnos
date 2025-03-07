@@ -23,7 +23,7 @@
         {#if $activeSection === 'professor'}
             <div class="info-box">
                 <h4>PROFESSOR</h4>
-                <h5>Allan Lima</h5>
+                <h5>Allan Diego Silva Lima | allan.lima@igarassu.ifpe.edu.br</h5>
             </div>
         {/if}
         {#if $activeSection === 'integrantes'}
@@ -33,7 +33,7 @@
                     <h5>Lincon Fraga | labf@discente.ifpe.edu.br</h5>
                     <h5>Mikaias Marinho</h5>
                     <h5>Gabriel Luna</h5>
-                    <h5>Lucas Cavalcanti</h5>
+                    <h5>Lucas Cavalcanti | lcod@discente.ifpe.edu.br</h5>
                     <h5>Karolayne Firmino</h5>
                 </ul>
             </div>

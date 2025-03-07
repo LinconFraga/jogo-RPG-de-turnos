@@ -1,190 +1,197 @@
 .battle-container {
-    width: 100%;
-    height: 100vh;
-    background: url('/images/medieval-battlefield.png') center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
-    color: #fff;
-    font-family: 'MedievalFont', fantasy;
-    overflow: hidden;
-  }
+  width: 100%;
+  height: 100vh;
+  background: url('/images/medieval-battlefield.png') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  color: #fff;
+  font-family: 'MedievalFont', fantasy;
+  overflow: hidden;
+  position: relative;
+}
 
-  .battle-scene {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 29%;
-    padding: 0 100px;
-    margin-top: 100px; /* Personagens movidos para baixo */
-  }
+/* caixa de mensagem */
+.message-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem; 
+  border-radius: 20px; 
+  text-align: center;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2rem;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 80%; 
+  max-width: 600px; 
+  z-index: 10;
+}
 
-  .character {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    transition: transform 0.5s ease;
-  }
+.battle-scene {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+  padding: 0 100px;
+  margin-top: 120px;
+}
 
-  .sprite {
-    position: relative;
-    top: 120%;
-    width: 100%;
-    height: 150%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.character {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition: transform 0.5s ease;
+}
 
-  .player-sprite {
-    background-image: url('/sprites/player.png');
-  }
+.sprite {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  height: 150%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .enemy-sprite {
-    background-image: url('/sprites/enemy.png');
-  }
+.player-sprite {
+  background-image: url('/sprites/player.png');
+}
 
-  .player-sprite.attack {
-    animation: attack-swing 0.5s ease-in-out;
-  }
+.enemy-sprite {
+  background-image: url('/sprites/enemy.png');
+}
 
-  .enemy-sprite.attack {
-    animation: attack-swing 0.5s ease-in-out;
-  }
+.player-sprite.attack {
+  animation: attack-swing 0.5s ease-in-out;
+}
 
-  @keyframes attack-swing {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(-30deg); }
-    100% { transform: rotate(0deg); }
-  }
+.enemy-sprite.attack {
+  animation: attack-swing 0.5s ease-in-out;
+}
 
-  @keyframes impact {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.9) rotate(5deg); }
-    100% { transform: scale(1); }
-  }
+@keyframes attack-swing {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
 
-  .player-sprite.cast {
-    animation: cast-spell 1s;
-  }
+@keyframes impact {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9) rotate(5deg); }
+  100% { transform: scale(1); }
+}
 
-  .stats {
-    position: absolute;
-    bottom: -30px;
-    width: 100%;
-  }
+.player-sprite.cast {
+  animation: cast-spell 1s;
+}
 
-  .health-bar, .mana-bar {
-    height: 10px;
-    background: #333;
-    border: 2px solid #000;
-    margin: 5px 0;
-    border-radius: 5px;
-    overflow: hidden;
-  }
+.stats {
+  position: absolute;
+  bottom: 130px;
+  width: 100%;
+}
 
-  .health-fill {
-    height: 100%;
-    background: linear-gradient(to right, #ff0000, #ff3333);
-    transition: width 0.3s ease;
-  }
+.health-bar, .mana-bar {
+  height: 10px;
+  background: #333;
+  border: 2px solid #000;
+  margin: 5px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
-  .mana-fill {
-    height: 100%;
-    background: linear-gradient(to right, #0000ff, #3333ff);
-    transition: width 0.3s ease;
-  }
+.health-fill {
+  height: 100%;
+  background: linear-gradient(to right, #ff0000, #ff3333);
+  transition: width 0.3s ease;
+}
 
-  .battle-ui {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    border-radius: 10px;
-    border: 2px solid;
-    z-index: 10;
-    margin-top: auto;
-  }
+.mana-fill {
+  height: 100%;
+  background: linear-gradient(to right, #0000ff, #3333ff);
+  transition: width 0.3s ease;
+}
 
-  .message-box {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.2rem;
-  }
+/* botões de curar e atacar */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 4rem; /* Aumentei o margin-bottom para mover os botões para baixo */
+  position: relative;
+  z-index: 5;
+}
 
-  .action-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
+.action-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-  .action-button {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: inherit;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
-  .action-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+.action-button.attack {
+  background: #8b0000;
+  color: white;
+}
 
-  .action-button.attack {
-    background: #8b0000;
-    color: white;
-  }
+.action-button.heal {
+  background: #006400;
+  color: white;
+}
 
-  .action-button.heal {
-    background: #006400;
-    color: white;
-  }
+.player-dead, .enemy-dead {
+  opacity: 0.5;
+  transform: rotate(90deg);
+  transition: all 0.5s ease;
+}
 
-  .player-dead, .enemy-dead {
-    opacity: 0.5;
-    transform: rotate(90deg);
-    transition: all 0.5s ease;
-  }
+.enemy-info {
+  position: absolute;
+  top: 160px;
+  width: 100%;
+  text-align: center;
+}
 
-  .audio-control {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-  }
+.enemy-name {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
 
-  .music-button {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: 2px solid;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.3s ease;
-  }
+/* Botão de som */
+.sound-button {
+  position: absolute;
+  top: 20px; 
+  right: 75px; 
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
+  transition: box-shadow 0.2s;
+}
 
-  .music-button:hover {
-    background: rgba(0, 0, 0, 0.9);
-  }
-
-  .enemy-info {
-    position: absolute;
-    top: 190px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .enemy-name {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-  }
+.sound-button:hover {
+  box-shadow: 0 0 15px rgba(204, 204, 204, 1);
+}
