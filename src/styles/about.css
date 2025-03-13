@@ -13,13 +13,7 @@
 
 .logo {
     margin-top: 20px;
-    width: 350px; /* Ajuste o tamanho conforme necessário */
-}
-
-.button-back {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    width: 350px; 
 }
 
 .about-content {
@@ -32,14 +26,34 @@
     font-size: 25px;
 }
 
-button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 20px;
+button, .button-back {
+    margin: 10px;
+    padding: 15px 30px; /* Ajuste de proporções */
+    font-size: 24px; 
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: 2px solid white;
     border-radius: 5px;
-    font-family: 'BroncoPersonalUse', sans-serif;
+    font-family: 'Bronco', serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+button:hover, .button-back:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+/* Ajuste do botão de voltar mantendo o estilo dos outros botões */
+.button-back {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Removendo qualquer contorno extra ao clicar */
+.button-back:focus {
+    outline: none;
+    box-shadow: none;
 }

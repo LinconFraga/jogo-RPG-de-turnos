@@ -31,8 +31,8 @@
                 <ul class="no-bullets">
                     <h4>INTEGRANTES</h4>
                     <h5>Lincon Fraga | labf@discente.ifpe.edu.br</h5>
-                    <h5>Mikaias Marinho</h5>
-                    <h5>Gabriel Luna</h5>
+                    <h5>Mikaias Marinho | mms59@discente.ifpe.edu.br</h5>
+                    <h5>Gabriel Luna | glr3@discente.ifpe.edu.br</h5>
                     <h5>Lucas Cavalcanti | lcod@discente.ifpe.edu.br</h5>
                     <h5>Karolayne Firmino | kfsl@discente.ifpe.edu.br</h5>
                 </ul>
@@ -41,10 +41,10 @@
         {#if $activeSection === 'uso_ia'}
             <div class="info-box">
                 <h4>USO DA IA</h4>
-                <h5> Destinada à criação da lógica dos códigos, ao aprendizado sobre
+                <h5> Destinada ao apoio à criação da lógica dos códigos, ao aprendizado sobre
                      o funcionamento dos mesmos, para facilitar sua leitura e a realização
                       das adaptações necessárias para a criação do estilo do jogo tal
-                       como idealizado, e à criação das imagens usadas no plano de fundo
+                       como idealizado; criação das imagens usadas no plano de fundo
                         e nos sprites. Foram usadas mais de uma inteligência artificial 
                         no projeto, sendo as principais o Claude, para os códigos, e o 
                         Microsoft Designer, para as imagens.
