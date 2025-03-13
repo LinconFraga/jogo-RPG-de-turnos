@@ -7,7 +7,7 @@
     
     onMount(() => {
         music = new Howl({
-            src: ['/sounds/victory-theme.mp3'],
+            src: ['/sounds/defeat-theme.mp3'],
             loop: true,
             volume: 0.5,
         });
@@ -41,8 +41,8 @@
     </div>
     
     <div class="end-content">
-        <h1>Vitória!</h1>
-        <p>Você derrotou o rei Og e recuperou o tesouro de Zatmênia! O reino está salvo!</p>
-        <button on:click={goToMainMenu}>VOLTAR AO MENU INICIAL</button>
+        <h1>Derrota!</h1>
+        <p>Você perdeu a luta contra o rei Og, e agora o povo está desolado! Tente novamente, herói! Coragem! Zatmênia ainda acredita em você!</p>
+        <button on:click={goToMainMenu}>VOLTAR AO MENU E TENTAR NOVAMENTE!</button>
     </div>
 </div>

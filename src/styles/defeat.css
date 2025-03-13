@@ -1,0 +1,98 @@
+
+.end {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/defeat.jpeg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Adiciona uma camada escura semi-transparente para melhorar a legibilidade do texto */
+.end::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo mais escuro na imagem */
+    z-index: 1;
+}
+
+.end-content {
+    background-color: rgba(53, 49, 49, 0.7); /* cor da tela em que aparece o texto */
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: #9e9c9c; /* cor do texto da mensagem de derrota */
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(105, 105, 103, 0.5); /* cor ao redor da tela do texto */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgb(58, 58, 58); /* cor da palavra "derrota!" */
+    text-shadow: 0 0 10px rgba(255, 253, 253, 0.7); /* sombra da palavra "derrota!" */
+}
+
+p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+@font-face {
+    font-family: 'Bronco';
+    src: url('/fonts/Bronco.ttf') format('truetype');
+  }
+
+button {
+    font-family: 'Bronco', serif;
+    margin-bottom: 5rem;
+    color: rgb(58, 58, 58); /* cor do texto dentro do botão */
+    text-shadow: 0 0 10px rgba(241, 247, 240, 0.7); /* cor ao redor do texto dentro do botão quando o mouse está encima dele*/
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: rgb(104, 104, 98); /* cor de fundo do botão quando o mouse está em cima */
+}
+
+.audio-control {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+}
+
+.music-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(#000000);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.music-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

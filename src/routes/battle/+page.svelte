@@ -160,6 +160,17 @@
     // Redirecionar para a tela de vitória
     window.location.href = '/victory'; // Ajuste o caminho conforme necessário
   }
+
+  // Função para ir para a tela de derrota
+  function goToDefeatScreen() {
+    // Parar a música da batalha se estiver tocando
+    if (bgMusic) {
+      bgMusic.pause();
+    }
+    
+    // Redirecionar para a tela de derrota
+    window.location.href = '/defeat'; // Caminho para a tela de derrota
+  }
   
   async function enemyTurn() {
     reiOg.state = 'attack';
@@ -188,6 +199,8 @@
     if (heroi.hp <= 0) {
       heroi.state = 'dead';
       gameMessage = 'Fim de Jogo! Você foi derrotado!';
+      // Adicionar tempo de espera antes de ir para a tela de derrota
+      setTimeout(goToDefeatScreen, 3000);
       return;
     }
     
