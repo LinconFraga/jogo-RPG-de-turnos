@@ -18,15 +18,6 @@
     color:blue;
 }
 
-.about-content {
-    width: 100vh;
-    height: auto;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 900px;
-    font-size: 25px;
-}
 
 button, .button-back {
     margin: 10px;
@@ -40,6 +31,8 @@ button, .button-back {
     font-family: 'Bronco', serif;
     text-decoration: none;
     transition: all 0.3s ease;
+    top: 10px;
+    
 }
 
 button:hover, .button-back:hover {
